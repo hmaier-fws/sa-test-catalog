@@ -7,3 +7,8 @@
     {% endif %}
   {% endfor %}
 </ul>
+
+{% assign json_files = site.static_files | where: "json", true %}
+{% for cur_file in json_files %}
+  {{ cur_file.path }}
+{% endfor %}
