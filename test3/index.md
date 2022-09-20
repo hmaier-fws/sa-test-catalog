@@ -1,7 +1,3 @@
-<--
-{% assign json_files = site.static_files | where: "json", true %}
--->
-
 # hello
 
 <style>
