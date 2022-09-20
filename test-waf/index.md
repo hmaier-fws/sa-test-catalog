@@ -1,4 +1,5 @@
 {% assign doclist = site.pages | sort: 'url'  %}
+{% assign static_list = site.static_files | sort: 'name'  %}
 
 <ul>
   {% for doc in doclist %}
@@ -8,12 +9,14 @@
   {% endfor %}
 </ul>
 
+# json_files
 {% assign json_files = site.static_files | where: "json", true %}
 {% for cur_file in json_files %}
   <a href="./{{ cur_file.name }}">{{ cur_file.name }}</a></ br>
 {% endfor %}
 
-{% for doc in doclist %}
+# static files
+{% for doc in static_list %}
   {% if doc.name contains '.json' %}
     <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
   {% endif %}
