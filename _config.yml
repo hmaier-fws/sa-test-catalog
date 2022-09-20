@@ -2,6 +2,7 @@ ignore_theme_config: true
 show_dir_listing: true
 name: sa test catalog
 title: null
+theme: null
 
 defaults:
   - scope:

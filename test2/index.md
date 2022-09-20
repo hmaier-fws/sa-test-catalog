@@ -14,3 +14,20 @@
     <a href="{{ site.baseurl }}{{ doc2.url }}">{{ doc2.url }}</a>
   {% endif %}
 {% endfor %}
+
+
+{% if page.url == page.dir %}
+   {% assign dn1 = '.' | append: page.url | split: '/' %}
+   {%- for each in site.html_pages -%}
+      {%- assign dn2 = '.' | append: each.url | split: '/' | pop -%}
+      {%- if dn2 == dn1 -%}
+         {% if each.url == each.dir %}
+      <p>{% octicon file-directory %}
+      <a href="{{ each.url | relative_url }}">{{ each.title }}</a></p>
+         {% else %}
+      <p>{% octicon file %}
+      <a href="{{ each.url | relative_url }}">{{ each.title }}</a></p>
+         {% endif %}
+      {%- endif -%}
+   {%- endfor -%}
+{% endif %}
