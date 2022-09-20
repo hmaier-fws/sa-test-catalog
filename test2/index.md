@@ -1,3 +1,9 @@
+<style>
+  .footer {
+    display: none;
+  }
+</style>
+
 {% assign doclist = site.pages | sort: 'url'  %}
 {% assign static_list = site.static_files %}
 
