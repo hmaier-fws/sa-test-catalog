@@ -16,8 +16,8 @@
 {% endfor %}
 
 # static files
-{% for doc in static_list %}
-  {% if doc.name contains '.json' %}
-    <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
+{% for doc2 in static_list %}
+  {% if doc2.name contains '.json' %}
+    <li><a href="{{ site.baseurl }}{{ doc2.url }}">{{ doc2.url }}</a></li>
   {% endif %}
 {% endfor %}
