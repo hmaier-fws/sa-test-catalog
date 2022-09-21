@@ -10,6 +10,9 @@
 # sa-catalog files - (file.path/file.name)
 {% for cur_file in sa_files %}
   {% if cur_file.name contains '.json' %}
+    path - {{cur_file.path}}, dir - {{cur_file.dir}}, url - {{cur_file.url}}
+
     <a href="{{ cur_file.path }}">{{ cur_file.path }}</a>
+    
   {% endif %}
 {% endfor %}
