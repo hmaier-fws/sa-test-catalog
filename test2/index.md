@@ -30,7 +30,6 @@
          {% if each.url == each.dir %}
       <a href="{{ each.url | relative_url }}">{{ each.title }}</a></p>
          {% else %}
-      <p>{% octicon file %}
       <a href="{{ each.url | relative_url }}">{{ each.title }}</a></p>
          {% endif %}
       {%- endif -%}
