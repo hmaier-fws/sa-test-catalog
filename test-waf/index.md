@@ -4,12 +4,12 @@
 
 # json files - (file.path/file.name)
 {% for cur_file in json_files %}
-  <a href="{{ cur_file.path }}/{{ cur_file.name }}">{{ cur_file.path }}/{{ cur_file.name }}</a>
+  <a href="{{ cur_file.path }}">{{ cur_file.name }}</a>
 {% endfor %}
 
 # sa-catalog files - (file.path/file.name)
 {% for cur_file in sa_files %}
   {% if cur_file.name contains '.json' %}
-    <a href="{{ cur_file.path }}/{{ cur_file.name }}">{{ cur_file.path }}/{{ cur_file.name }}</a>
+    <a href="{{ cur_file.path }}">{{ cur_file.path }}</a>
   {% endif %}
 {% endfor %}
