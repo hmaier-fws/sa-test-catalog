@@ -8,10 +8,10 @@ defaults:
   - scope:
       path: "test-waf"
     values:
-      json: true
+      json: false
       sa-catalog: true
 
   - scope:
       path: "test3"
     values:
-      sa-catalog: true
+      sa-catalog: false
