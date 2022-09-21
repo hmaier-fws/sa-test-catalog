@@ -5,7 +5,7 @@
 
 
 {% assign doclist = site.pages | sort: 'url'  %}
-
+{% assign doclist2 = site.static_files | where: path, "test3" %}
 
 {% assign json_files = site.static_files | where: "json", true %}
 
@@ -25,6 +25,14 @@
 
 # all docs
 {% for doc in doclist %}
-    {{ doc.path }}/{{ doc.name }}
+    {{ doc.dir }} - {{ doc.name }}
+
+    <a href="{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
+{% endfor %}
+
+# all docs in test3
+{% for doc in doclist %}
+    {{ doc.dir }} - {{ doc.name }}
+
     <a href="{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
 {% endfor %}
