@@ -19,5 +19,7 @@
 
 # sa-catalog files - (file.path/file.name)
 {% for cur_file in sa_files %}
-  <a href="./{{ cur_file.name }}">{{ cur_file.path }}/{{ cur_file.name }}</a>
+  {% if cur_file.name contains '.json' %}
+    <a href="./{{ cur_file.name }}">{{ cur_file.path }}/{{ cur_file.name }}</a>
+  {% endif %}
 {% endfor %}
