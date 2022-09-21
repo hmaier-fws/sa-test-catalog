@@ -8,11 +8,18 @@
 {% assign doclist2 = site.static_files | where: path, "test3" %}
 
 {% assign json_files = site.static_files | where: "json", true %}
+{% assign sa_files = site.static_files | where: "sa-catalog", true %}
 
-# json files - (file.pat/file.name)
+# json files - (file.path/file.name)
 {% for cur_file in json_files %}
   <a href="./{{ cur_file.name }}">{{ cur_file.path }}/{{ cur_file.name }}</a>
 {% endfor %}
+
+# sa-catalog files - (file.path/file.name)
+{% for cur_file in sa_files %}
+  <a href="./{{ cur_file.name }}">{{ cur_file.path }}/{{ cur_file.name }}</a>
+{% endfor %}
+
 
 
 # static files
@@ -34,5 +41,5 @@
 {% for doc in doclist3 %}
     {{ doc.dir }} - {{ doc.name }}
 
-    <a href="./{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
+    <a href=".{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
 {% endfor %}

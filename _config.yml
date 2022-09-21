@@ -9,3 +9,8 @@ defaults:
       path: "test-waf"
     values:
       json: true
+
+  - scope:
+      path: "test3"
+    values:
+      sa-catalog: true
