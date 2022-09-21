@@ -27,12 +27,12 @@
 {% for doc in doclist %}
     {{ doc.dir }} - {{ doc.name }}
 
-    <a href="{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
+    <a href="./{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
 {% endfor %}
 
 # all docs in test3
-{% for doc in doclist %}
+{% for doc in doclist3 %}
     {{ doc.dir }} - {{ doc.name }}
 
-    <a href="{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
+    <a href="./{{ site.baseurl }}{{ doc.url }}">{{ site.baseurl }}{{ doc.url }}</a>
 {% endfor %}
