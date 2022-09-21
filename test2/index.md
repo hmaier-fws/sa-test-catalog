@@ -4,6 +4,8 @@
   }
 </style>
 
+# test2/index.md
+
 {% assign doclist = site.pages | sort: 'url'  %}
 {% assign static_list = site.static_files %}
 

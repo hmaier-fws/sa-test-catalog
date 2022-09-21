@@ -1,4 +1,5 @@
-# hello
+# test3/x-index.md
+## pahe name: {{ page.name }}
 
 <style>
   .footer {
@@ -30,10 +31,8 @@
       {%- assign dn2 = '.' | append: each.url | split: '/' | pop -%}
       {%- if dn2 == dn1 -%}
          {% if each.url == each.dir %}
-      <p>{% octicon file-directory %}
       <a href="{{ each.url | relative_url }}">{{ each.title }}</a></p>
          {% else %}
-      <p>{% octicon file %}
       <a href="{{ each.url | relative_url }}">{{ each.title }}</a></p>
          {% endif %}
       {%- endif -%}
