@@ -1,7 +1,7 @@
 {% assign json_files = site.static_files | where: "json", true %}
 {% assign sa_files = site.static_files | where: "sa-catalog", true %}
 
-# url: {{site.url}}
+# url: {{site.url}}, base: {{site.baseurl}}
 
 # json files - (file.path/file.name)
 {% for cur_file in json_files %}
