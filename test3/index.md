@@ -19,19 +19,3 @@
   {{ cur_file.path }}: <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
   {% endif %}
 {% endfor %}
-
-# sa-catalog files - (file.path/file.name)
-<p>
-{% for cur_file in sa_files %}
-  {% if cur_file.name contains '.json' %}
-  {{ cur_file.path }}: <a href="{{ site.baseurl }}{{ cur_file.path }}">{{ cur_file.name }}</a> </ br>
-  {% endif %}
-{% endfor %}
-</p>
-
-# sa-catalog files - (file.path/file.name)
-{% for cur_file in sa_files %}
-  {% if cur_file.name contains '.json' %}
-  {{ cur_file.path }}: <a href='{{ site.baseurl }}{{ cur_file.path }}''>{{ cur_file.name }}</a>
-  {% endif %}
-{% endfor %}
