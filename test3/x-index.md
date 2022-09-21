@@ -1,5 +1,7 @@
 # test3/x-index.md
-## pahe name: {{ page.name }}
+## page.name: {{ page.name }}
+## page.dir: {{ page.dir }}
+## page.path: {{ page.path }}
 
 <style>
   .footer {
