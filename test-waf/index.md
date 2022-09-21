@@ -5,15 +5,15 @@
 
 # json files - (file.path/file.name)
 {% for cur_file in json_files %}
-  <a href="{{site.baseurl}}/{{ cur_file.path }}">{{ cur_file.name }}</a>
+  <a href="{{ site.baseurl }}{{ cur_file.path }}">{{ cur_file.name }}</a>
 {% endfor %}
 
 # sa-catalog files - (file.path/file.name)
 {% for cur_file in sa_files %}
   {% if cur_file.name contains '.json' %}
-    path - {{cur_file.path}}, dir - {{cur_file.dir}}, url - {{cur_file.url}}
+    path - {{ cur_file.path }}, dir - {{ cur_file.dir }}, url - {{ cur_file.url }}
 
-    <a href="{{site.baseurl}}/{{ cur_file.path }}">{{ cur_file.path }}</a>
+    <a href="{{ site.baseurl }}{{ cur_file.path }}">{{ cur_file.path }}</a>
 
   {% endif %}
 {% endfor %}
