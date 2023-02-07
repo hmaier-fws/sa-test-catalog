@@ -1,5 +1,6 @@
 # sa-test-catalog
-Testing instance of Science Applications catalog. Files placed in the `/test-waf` directory will be harvested by the testing instance of the science catalog.
+Testing instance of Science Applications catalog. Files placed in the `/test-waf` directory will be harvested by the testing instance of the science catalog. URL: https://hmaier-fws.github.io/sa-test-catalog/test-waf/
+
 
 Test catalog: https://science-catalog-test.djcase.com/science/catalog/
 

@@ -15,14 +15,3 @@ defaults:
       path: "test3"
     values:
       sa-catalog: false
-      json: true
-
-  - scope:
-      path: sb-projects
-    values:
-      warehouse: true
-
-  - scope:
-      path: gulfcoast-proj
-    values:
-      warehouse: true
