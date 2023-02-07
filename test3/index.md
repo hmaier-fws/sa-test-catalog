@@ -41,7 +41,6 @@
     
     {% comment %}
     file.path: {{ cur_file.path }}, file.name: {{ cur_file.name }}, {% {{ cur_file.path }} | split "/" | first %}
-    {% endcomment %}
   
   {% endif %}
 {% endfor %}

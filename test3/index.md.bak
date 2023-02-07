@@ -34,7 +34,7 @@
   {% if cur_file.name contains '.json' %}
     {% capture var1 %}
     {{ cur_file.path }}
-    {% capture %}
+    {% endcapture %}
     
     ## VAR1
     var1: {{ var1 }}
