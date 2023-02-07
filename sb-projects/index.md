@@ -2,9 +2,9 @@
 
 
 {% for cur_file in wh_files %}
-  {% if cur_file.name contains '.json' and cur_file.name contains '/sb-projects/'%}
+  {% if cur_file.name contains '.json' and cur_file.name contains '/sb-projects/' %}
   
-    <a href="{{ site.baseurl }}{{ curFile.path }}"> {{ curFile.name }} </a>
+    <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
     
   {% endif %}
 {% endfor %}
