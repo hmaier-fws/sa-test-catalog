@@ -33,7 +33,7 @@
 
   {% if cur_file.name contains '.json' %}
     {% capture var1 %}
-    {{ cur_file.path }}
+    {{ cur_file.path | split: "/" }}
     {% endcapture %}
     
     ## VAR1

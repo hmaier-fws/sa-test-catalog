@@ -37,7 +37,7 @@
     {% endcapture %}
     
     ## VAR1
-    var1: {{ var1 }}, cleaned: {{ var1.first }}
+    var1: {{ var1[0] }}, cleaned: {{ var1.first }}
     
   {% endif %}
 {% endfor %}
