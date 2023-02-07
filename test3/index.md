@@ -31,6 +31,6 @@
 # Split paths
 {% for cur_file in wh_files %}
   {% if cur_file.name contains '.json' %}
-  file.path: {{ cur_file.path }}, file.name: {{ cur_file.name }}, {% cur_file.path | split "/" | first %}
+  file.path: {{ cur_file.path }}, file.name: {{ cur_file.name }}, {% {{ cur_file.path }} | split "/" | first %}
   {% endif %}
 {% endfor %}
