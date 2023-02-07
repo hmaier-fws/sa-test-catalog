@@ -16,4 +16,4 @@ The following collections of files were complied for testing FWS Data Warehouse 
 Sample data were downloaded from [ScienceBase](https://www.sciencebase.gov/catalog/item/4f4e476ee4b07f02db47e164) as mdJSON metadata.
 
   - mdJSON project metadata records only: [https://hmaier-fws.github.io/sa-test-catalog/sb-projects](https://hmaier-fws.github.io/sa-test-catalog/sb-projects)
-  - A single project ([Gulf Coast LCD](https://www.sciencebase.gov/catalog/item/596d881de4b0d1f9f0616a89)) and all associated products: [https://hmaier-fws.github.io/sa-test-catalog/gulfcoast-proj](https://hmaier-fws.github.io/sa-test-catalog/gulfcoast-proj)
+  - A single project ([Gulf Coast LDC](https://www.sciencebase.gov/catalog/item/596d881de4b0d1f9f0616a89)) and all associated products: [https://hmaier-fws.github.io/sa-test-catalog/gulfcoast-proj](https://hmaier-fws.github.io/sa-test-catalog/gulfcoast-proj)
