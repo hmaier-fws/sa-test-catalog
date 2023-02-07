@@ -36,7 +36,7 @@
       {{ cur_file.path }}
     {% endcapture %}
     
-  {% assign var2 = var1 | replace: "/", ", " %}
+  {% assign var2 = var1 | replace: "/", ", " | split: ", " %}
   var2: {{var2}}, var2[1]: {{var2[1]}}, var2[2]: {{var2[2]}}, var2[3]: {{var2[3]}}
     
     v1replace: {{ var1 | replace: "/", ", "}}
