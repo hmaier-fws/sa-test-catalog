@@ -39,8 +39,6 @@
     ## VAR1
     var1: {{ var1 }}
     
-    {% comment %}
-    file.path: {{ cur_file.path }}, file.name: {{ cur_file.name }}, {% {{ cur_file.path }} | split "/" | first %}
   
   {% endif %}
 {% endfor %}
