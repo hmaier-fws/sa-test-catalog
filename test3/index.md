@@ -39,10 +39,10 @@
     v1replace: {{ var1 | replace: "/", ", "}}
     
     {% assign var2 = var1 | replace: "/", ", " %}
-    var2: {{ var2 }}
+    var2: {{ var2 }}, v21 = {{var2[1]}}
     
     ## VAR1
-    var1: {{ var1 }}, cleaned: {{ var1.first }}
+    var1: {{ var1 }}, cleaned: {{ var1[1] }}
     
   {% endif %}
 {% endfor %}
