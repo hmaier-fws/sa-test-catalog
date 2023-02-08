@@ -17,9 +17,9 @@
   {% endcomment %}
 
   {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
+    {{% cur_file.path %}}
     {% capture output_text %}
-      {{% cur_file.path %}}
-      {% raw %}<a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>{% endraw %}
+<a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
     {% endcapture %}
     
     {{- output_text -}}
