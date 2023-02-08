@@ -18,10 +18,12 @@
   {% endcomment %}
 
   {% comment %}
-    {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
+    **
+    ** {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
+    **
   {% endcomment %}
   
-  {% if cur_file.name contains '.json' and cur_file.path contains page.dir %}
+  {% if cur_file.name contains '.json' and cur_file.path contains echo page.dir %}
     {{% cur_file.path %}}
     {% capture output_text %}
 <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
