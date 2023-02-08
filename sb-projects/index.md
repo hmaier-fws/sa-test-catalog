@@ -22,7 +22,7 @@
       <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
     {% endcapture %}
     
-    {{ output_text }}
+    {{- output_text -}}
     
     
   {% endif %}
