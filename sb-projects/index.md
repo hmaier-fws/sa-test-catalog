@@ -1,14 +1,7 @@
 {% assign wh_files = site.static_files | where: "warehouse", true %}
 
-{{ page.dir }}
 
 {% for cur_file in wh_files %}
-
-  {% capture read_info %}
-    file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
-  {% endcapture %}
-  
-  Reading: {{ read_info }}
 
 
   {% comment %}
@@ -17,12 +10,6 @@
     **
   {% endcomment %}
 
-  {% comment %}
-    **
-    ** O% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %O
-    **
-  {% endcomment %}
-  
   {% if cur_file.name contains '.json' and cur_file.path contains page.dir %}
     {{% cur_file.path %}}
     {% capture output_text %}
@@ -31,10 +18,10 @@
     
     {{- output_text -}}
     
-    
   {% endif %}
   
 {% endfor %}
+
 
 
 {% comment %}
@@ -61,4 +48,16 @@
       
     {% endif %}
   {% endfor %}
+
+
+More debugging code:
+  {% capture read_info %}
+    file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
+  {% endcapture %}
+  
+  {{ page.dir }}
+
+  Reading: {{ read_info }}
+
+
 {% endcomment %}
