@@ -2,11 +2,15 @@
 
 
 {% for cur_file in wh_files %}
-path name is {{% cur_file.path %}}
-{% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
-{{% cur_file.path %}}
-<a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
-{% endif %}
+
+  START file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
+
+  {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
+  {{% cur_file.path %}}
+  START file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
+
+  <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
+  {% endif %}
 {% endfor %}
 
 
