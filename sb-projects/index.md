@@ -1,5 +1,6 @@
 {% assign wh_files = site.static_files | where: "warehouse", true %}
 
+{{ page.dir }}
 
 {% for cur_file in wh_files %}
 
@@ -16,7 +17,9 @@
     **
   {% endcomment %}
 
-  {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
+  {% comment %} {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %} {% endcomment %}
+  
+  {% if cur_file.name contains '.json' and cur_file.path contains {{ page.dir }} %}
     {{% cur_file.path %}}
     {% capture output_text %}
 <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
