@@ -19,7 +19,7 @@
   {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
     {% capture output_text %}
       {{% cur_file.path %}}
-      <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
+      {% raw %}<a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>{% endraw %}
     {% endcapture %}
     
     {{- output_text -}}
