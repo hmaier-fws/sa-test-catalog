@@ -19,7 +19,7 @@
 
   {% comment %}
     **
-    ** {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
+    ** O% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %O
     **
   {% endcomment %}
   
