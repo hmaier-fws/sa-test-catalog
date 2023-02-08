@@ -23,7 +23,7 @@
     **
   {% endcomment %}
   
-  {% if cur_file.name contains '.json' and cur_file.path contains echo page.dir %}
+  {% if cur_file.name contains '.json' and cur_file.path contains page.dir %}
     {{% cur_file.path %}}
     {% capture output_text %}
 <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
