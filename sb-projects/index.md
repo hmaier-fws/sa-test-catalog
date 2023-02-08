@@ -3,18 +3,32 @@
 
 {% for cur_file in wh_files %}
 
-  START file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
+  {% capture read_info %}
+    file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
+  {% endcapture %}
+  
+  Reading: {{ read_info }}
+
+
+  {% comment %}
+    **
+    ** Process only JSON files in currently directory
+    **
+  {% endcomment %}
 
   {% if cur_file.name contains '.json' and cur_file.path contains '/sb-projects/' %}
-  {{% cur_file.path %}}
-  START file.path = {{ cur_file.path }}, file.dir = {{ cur_file.dir }}, file.name = {{ cur_file.name }} END
-
-  <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
+    {{% cur_file.path %}}
+    <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
   {% endif %}
+  
 {% endfor %}
 
 
 {% comment %}
+  **
+  ** Extra code for testing
+  **
+  
   # Split paths
   {% for cur_file in wh_files %}
 
