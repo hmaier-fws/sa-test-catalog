@@ -18,11 +18,11 @@ defaults:
       json: true
 
   - scope:
-      path: sb-projects
+      path: "sb-projects"
     values:
       warehouse: true
 
   - scope:
-      path: gulfcoast-proj
+      path: "gulfcoast-proj"
     values:
       warehouse: true
