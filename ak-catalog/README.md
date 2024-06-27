@@ -16,7 +16,6 @@ The Alaska catalog is obtaining source data from a web acessible folder (WAF) lo
   - QA/QC issues: https://science-catalog-ak.djcase.com/science/catalog/api/item/qaqcissues
   - API documentation: https://science-catalog-test.djcase.com/science/catalog/server_doc/
 
-
 ## `ak-catalog` directory
 
 Source data for testing an Alaska instance of the catalog. 
