@@ -14,14 +14,14 @@
   {{ cur_file.path }}: <a href="{{ site.baseurl }}{{ cur_file.path }}">{{ cur_file.name }}</a>
 {% endfor %}
 
-# sa-catalog files - (file.path/file.name)
+# List files where sa-catalog=true - (file.path/file.name)
 {% for cur_file in wh_files %}
   {% if cur_file.name contains '.json' %}
   {{ cur_file.path }}: <a href="{{ site.baseurl }}{{ cur_file.path }}"> {{ cur_file.name }} </a>
   {% endif %}
 {% endfor %}
 
-# sa-catalog files - (file.path, file.dir, file.name)
+# List files where wh_files=true - (file.path, file.dir, file.name)
 {% for cur_file in wh_files %}
   {% if cur_file.name contains '.json' %}
   file.path = {{ cur_file.path }} - file.dir = {{ cur_file.dir }} - file.name = {{ cur_file.name }}
