@@ -6,6 +6,12 @@ theme: null
 
 defaults:
   - scope:
+      path: "ak-catalog"
+    values:
+      json: false
+      sa-catalog: true
+
+  - scope:
       path: "test-waf"
     values:
       json: false
