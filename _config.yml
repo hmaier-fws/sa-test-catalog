@@ -4,12 +4,13 @@ name: sa test catalog
 title: null
 theme: null
 
+# Set front matter variables for use in scripting to render
+# various views of the content
 defaults:
   - scope:
       path: "ak-catalog"
     values:
-      json: false
-      sa-catalog: true
+      ak-catalog: true
 
   - scope:
       path: "test-waf"
